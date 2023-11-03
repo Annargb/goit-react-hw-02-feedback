@@ -3,6 +3,8 @@ import { Statistics } from './Section-component/Statistics-component/Statistics'
 import { FeedbackOptions } from './Section-component/FeedbackOptions-component/FeedbackOptions';
 import { Section } from './Section-component/Section';
 import { Notification } from './Section-component/Notification-component/Notification';
+import { Wrapper } from './App.styled';
+import { GlobalStyled } from './GlobalStyle';
 
 export class App extends Component {
   state = {
@@ -34,7 +36,7 @@ export class App extends Component {
     const options = Object.keys(this.state);
 
     return (
-      <>
+      <Wrapper>
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={options}
@@ -55,7 +57,8 @@ export class App extends Component {
             <Notification message="There is no feedback" />
           )}
         </Section>
-      </>
+        <GlobalStyled />
+      </Wrapper>
     );
   }
 }

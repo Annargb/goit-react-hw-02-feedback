@@ -1,3 +1,9 @@
+import {
+  StatisticsTextItem,
+  AccentText,
+  StatisticList,
+} from './Statistics.styled';
+
 export const Statistics = ({
   good,
   neutral,
@@ -6,12 +12,22 @@ export const Statistics = ({
   positivePercentage,
 }) => (
   <>
-    <ul>
-      <li>Good: {good}</li>
-      <li>Neutral: {neutral}</li>
-      <li>Bad: {bad}</li>
-      <li>Total: {total}</li>
-      <li>Positive feedback: {positivePercentage}%</li>
-    </ul>
+    <StatisticList>
+      <StatisticsTextItem>
+        Good: <AccentText>{good}</AccentText>
+      </StatisticsTextItem>
+      <StatisticsTextItem>
+        Bad: <AccentText>{bad}</AccentText>
+      </StatisticsTextItem>
+      <StatisticsTextItem>
+        Neutral: <AccentText>{neutral}</AccentText>
+      </StatisticsTextItem>
+      <StatisticsTextItem>
+        Total: <AccentText>{total}</AccentText>
+      </StatisticsTextItem>
+      <StatisticsTextItem>
+        Positive feedback: <AccentText>{positivePercentage}%</AccentText>
+      </StatisticsTextItem>
+    </StatisticList>
   </>
 );
